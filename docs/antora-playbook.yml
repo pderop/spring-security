@@ -16,7 +16,7 @@ git:
   ensure_git_suffix: false
 content:
   sources:
-  - url: https://github.com/spring-projects/spring-security
+  - url: https://github.com/pderop/spring-security
     branches: [main]
     tags: ['6.+({0..9}).+({0..9})?(-{RC,M}*)']
     start_path: docs
