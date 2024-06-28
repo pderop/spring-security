@@ -78,7 +78,7 @@ class RepositoryConventionPlugin implements Plugin<Project> {
 				content {
 					excludeGroup('net.minidev')
 				}
-				url = 'https://repo.spring.io/release/'
+				url = 'https://repo.spring.io/milestone/'
 			}
 		}
 	}

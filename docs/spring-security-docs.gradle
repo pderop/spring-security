@@ -9,10 +9,10 @@ apply plugin: 'java'
 
 antora {
 	options = [clean: true, fetch: !project.gradle.startParameter.offline, stacktrace: true]
-//	environment = [
-//		'BUILD_REFNAME': 'HEAD',
-//		'BUILD_VERSION': project.version,
-//	]
+	environment = [
+		'BUILD_REFNAME': 'HEAD',
+		'BUILD_VERSION': project.version,
+	]
 }
 
 tasks.named("generateAntoraYml") {
@@ -37,8 +37,8 @@ def generateAttributes() {
 
 	def docsTag = snapshotBuild ? 'current' : project.version
 	def ghTag = snapshotBuild ? 'main' : project.version
-	def ghUrl = "https://github.com/pderop/spring-security/tree/$ghTag"
-	def ghOldSamplesUrl = 'https://github.com/pderop/spring-security/tree/5.4.x/samples'
+	def ghUrl = "https://github.com/spring-projects/spring-security/tree/$ghTag"
+	def ghOldSamplesUrl = 'https://github.com/spring-projects/spring-security/tree/5.4.x/samples'
 	def ghSamplesUrl = "https://github.com/spring-projects/spring-security-samples/tree/$samplesBranch"
 	def securityDocsUrl = "https://docs.spring.io/spring-security/site/docs/$docsTag"
 	def securityApiUrl = "$securityDocsUrl/api/"
